@@ -10,7 +10,8 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-
+      - name: List files
+        run: ls -la
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -19,3 +20,4 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+
